@@ -1,0 +1,72 @@
+#
+# Changes to this file will be overwritten by `trmnlp pull`.
+#
+# Docs: https://help.usetrmnl.com/en/articles/10542599-importing-and-exporting-private-plugins#h_581fb988f0
+#
+---
+strategy: static
+no_screen_padding: 'no'
+dark_mode: 'no'
+static_data: '{
+  "last_game": {
+    "name": "Chicago Bears at Detroit Lions",
+    "date": "2025-09-14T17:00Z",
+    "formatted_date": "Sunday, September 14, 2025 at 05:00 PM",
+    "status": "Final",
+    "venue": "Ford Field",
+    "teams": [
+      {
+        "name": "Detroit Lions",
+        "abbreviation": "DET",
+        "home_away": "home",
+        "score": {
+          "value": 52.0,
+          "displayValue": "52"
+        },
+        "winner": true,
+        "record": "1-1",
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/det.png"
+      },
+      {
+        "name": "Chicago Bears",
+        "abbreviation": "CHI",
+        "home_away": "away",
+        "score": {
+          "value": 21.0,
+          "displayValue": "21"
+        },
+        "winner": false,
+        "record": "0-2",
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png"
+      }
+    ]
+  },
+  "next_game": {
+    "name": "Dallas Cowboys at Chicago Bears",
+    "date": "2025-09-21T20:25Z",
+    "formatted_date": "Sunday, September 21, 2025 at 08:25 PM",
+    "status": "Scheduled",
+    "venue": "Soldier Field",
+    "teams": [
+      {
+        "name": "Chicago Bears",
+        "abbreviation": "CHI",
+        "home_away": "home",
+        "record": "N/A",
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png"
+      },
+      {
+        "name": "Dallas Cowboys",
+        "abbreviation": "DAL",
+        "home_away": "away",
+        "record": "N/A",
+        "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png"
+      }
+    ]
+  }
+}'
+polling_verb: get
+polling_url: ''
+polling_headers: ''
+name: Bears Football
+refresh_interval: 1440
