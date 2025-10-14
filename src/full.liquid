@@ -1,91 +1,60 @@
-<!-- <div class="title_bar">
-<span class="title">Current Schedule</span>
-</div> -->
-
-
-
-
-<div class="mashup mashup--1Tx1B">
-    <div class="view view--half_horizontal">
-        <div class="layout">
-
-
-            <div class="flex flex--row flex--center-x">
-                <div class="flex flex--row">
-
-
-
-                    <div class="">
-                        <img src="{{ next_game.teams[0].logo }}" alt="{{ next_game.teams[0].name }}" width="100">
-                        <div><strong>{{ next_game.teams[0].name }}</strong></div>
-                        <div><em>{{ next_game.teams[0].home_away | capitalize }}</em></div>
-                    </div>
-
-
-
-                    <div class="col">
-
-                        <div class="row row--center">
-                            <span class="value value--xxsmall">{{ next_game.formatted_date }}</span>
-                        </div>
-                        <div class="row row--center">{{ next_game.venue }}</div>
-                    </div>
-
-
-                    <div class="">
-                        <img src="{{ next_game.teams[1].logo }}" alt="{{ next_game.teams[1].name }}" width="100">
-                        <div><strong>{{ next_game.teams[1].name }}</strong></div>
-                        <div><em>{{ next_game.teams[1].home_away | capitalize }}</em></div>
-                    </div>
-                </div>
-
+<div class="layout layout--col gap--space-between">
+    <div class="grid">
+        <div class="item col--span-1">
+            <div class="meta"></div>
+            <div class="content">
+                <img src="{{ next_game.teams[0].logo }}" alt="{{ next_game.teams[0].name }}" width="75">
+                <span class="value value--small">{{ next_game.teams[0].name }}</span>
+                <span class="label">{{ next_game.teams[0].home_away | capitalize }}</span>
             </div>
         </div>
-    </div>
-
-    <div class="view view--half_horizontal">
-        <div class="layout">
-
-
-            <div class="flex flex--row flex--center-x">
-                <div class="flex flex--row">
-
-                    <div class="">
-                        <img src="{{ last_game.teams[0].logo }}" alt="{{ last_game.teams[0].name }}" width="100">
-                        <div><strong>{{ last_game.teams[0].name }}</strong></div>
-                        <div><em>{{ last_game.teams[0].home_away | capitalize }}</em></div>
-
-                        <div><em>{{ last_game.teams[0].record }}</em></div>
-                    </div>
-
-
-
-                    <div class="col">
-                        <div class="row row--center">
-                            <span class="value value--xxsmall">{{ last_game.formatted_date }}</span>
-                        </div>
-                        <div class="row row--center">{{ last_game.venue }}</div>
-                        <div class="row row--center">
-                            <span class="value value--xsmall">Final Score</span>
-                        </div>
-                        <div class="row row--center">
-                            <span><em>{{ last_game.teams[0].score.displayValue }} - {{ last_game.teams[1].score.displayValue }} </em></span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="">
-                        <img src="{{ last_game.teams[1].logo }}" alt="{{ last_game.teams[1].name }}" width="100">
-                        <div><strong>{{ last_game.teams[1].name }}</strong></div>
-                        <div><em>{{ last_game.teams[1].home_away | capitalize }}</em></div>
-                        <div><em>{{ last_game.teams[1].record }}</em></div>
-                    </div>
-                </div>
-
+        <div class="item col--span-1">
+            <div class="meta"></div>
+            <div class="content">
+                <img src="{{ next_game.teams[1].logo }}" alt="{{ next_game.teams[1].name }}" width="75">
+                <span class="value value--small">{{ next_game.teams[1].name }}</span>
+                <span class="label">{{ next_game.teams[1].home_away | capitalize }}</span>
             </div>
         </div>
+        <div class="row row--center">
+
+            <span class="value value--xsmall"><p>Next Game</p> {{ next_game.formatted_date }}</span>
+        </div>
+        <div class="row row--center">{{ next_game.venue }}</div>
     </div>
 
-
+    <div class="divider"></div>
+    <div class="grid">
+        <div class="item col--span-1">
+            <div class="meta"></div>
+            <div class="content">
+                <img src="{{ last_game.teams[0].logo }}" alt="{{ last_game.teams[0].name }}" width="75">
+                <span class="value value--small">{{ last_game.teams[0].name }}</span>
+                <span class="label">{{ last_game.teams[0].home_away | capitalize }}</span>
+                <span class="label label--large label--outline">{{ last_game.teams[0].score.displayValue }}</span>
+                <span class="label">{{ last_game.teams[0].record }}</span>
+            </div>
+        </div>
+        <div class="item col--span-1">
+            <div class="meta"></div>
+            <div class="content">
+                <img src="{{ last_game.teams[1].logo }}" alt="{{ last_game.teams[1].name }}" width="75">
+                <span class="value value--small">{{ last_game.teams[1].name }}</span>
+                <span class="label">{{ last_game.teams[1].home_away | capitalize }}</span>
+                <span class="label label--large label--outline">{{ last_game.teams[1].score.displayValue }}</span>
+                <span class="label">{{ last_game.teams[1].record }}</span>
+            </div>
+        </div>
+        <div class="row row--center">
+            <span class="value value--xsmall"><p>Previous Game</p>{{ last_game.formatted_date }}</span>
+        </div>
+        <div class="row row--center">{{ last_game.venue }}</div>
+    </div>
+    <div class="title_bar item col--span-1">
+        <img class="image" src="https://usetrmnl.com/images/plugins/trmnl--render.svg">
+        <span class="title">{{ trmnl.plugin_settings.instance_name }}</span>
+        <span class="instance">Description</span>
+    </div>
 </div>
+
+
