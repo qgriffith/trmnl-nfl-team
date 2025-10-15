@@ -1,1 +1,40 @@
-quadrant!
+
+<div class="layout layout--col gap--space-between">
+    <div class="grid">
+        <div class="item">
+            <div class="meta"></div>
+            <div class="content">
+            <span>
+                <img class="image-dither" src="{{ next_game.teams[0].logo }}" height="25" alt="{{ next_game.teams[0].displayName }} logo">
+                <img class="image-dither" src="{{ next_game.teams[1].logo }}" height="25" alt="{{ next_game.teams[1].displayName }} logo">
+            </span>
+                <span class="value value--xxsmall">{{ next_game.name }}</span>
+                <span class="value value--xxsmall">{{ next_game.formatted_date}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="grid" style="gap: 9px;">
+        <div class="item col--span-7">
+            <div class="meta"></div>
+            <div class="content">
+            <span>
+                <img class="image-dither" src="{{ last_game.teams[0].logo }}" height="25" alt="{{ next_game.teams[0].displayName }} logo">
+                <img class="image-dither" src="{{ last_game.teams[1].logo }}" height="25" alt="{{ next_game.teams[1].displayName }} logo">
+            </span>
+                <span class="value value--xxsmall">{{ last_game.name }}</span>
+                <div class="item">
+                    <span class="value value--xsmall">{{ last_game.teams[0].abbreviation }} {{ last_game.teams[0].score.displayValue}} - {{ last_game.teams[1].abbreviation }} {{ last_game.teams[1].score.displayValue}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="title_bar">
+    <img class="image" src="https://usetrmnl.com/images/plugins/trmnl--render.svg">
+    <span class="title">{{ trmnl.plugin_settings.instance_name }}</span>
+    <span class="instance">Description</span>
+</div>

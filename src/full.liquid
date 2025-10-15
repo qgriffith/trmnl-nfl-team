@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="row row--center">
-            <span class="value value--xsmall"><p>Previous Game</p>{{ last_game.formatted_date }}</span>
+            <span class="value value--xsmall"><p>Previous Game</p>{{ last_game.date | date: "%A, %B %d %l:%M %p"}}</span>
         </div>
         <div class="row row--center">{{ last_game.venue }}</div>
     </div>
