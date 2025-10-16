@@ -38,7 +38,7 @@
         <div class="item col--span-1">
             <div class="meta"></div>
             <div class="content">
-                <img src="{{ last_game.teams[1].logo }}" alt="{{ last_game.teams[1].name }}" width="75">
+                <img class="image-dither" src="{{ last_game.teams[1].logo }}" alt="{{ last_game.teams[1].name }}" width="75">
                 <span class="value value--small">{{ last_game.teams[1].name }}</span>
                 <span class="label">{{ last_game.teams[1].home_away | capitalize }}</span>
                 <span class="label label--large label--outline">{{ last_game.teams[1].score.displayValue }}</span>

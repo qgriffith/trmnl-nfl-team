@@ -99,7 +99,7 @@ end
 
 # Extracts and formats game information
 class GameFinder
-  LOGO_INDEX = 9
+  LOGO_INDEX = 1
   FINAL_STATUS_NAMES = ['STATUS_FINAL', 'Final'].freeze
 
   def initialize(team_abbr)
